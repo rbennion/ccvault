@@ -1,0 +1,9 @@
+{
+  "name": "life-vault",
+  "description": "Run your personal and work life from an Obsidian vault: a get-to-know-you interview, projects and tasks, a daily briefing from your email and calendar, and a vault that keeps learning about you.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Rick Bennion"
+  },
+  "keywords": ["obsidian", "planner", "tasks", "briefing", "personal"]
+}

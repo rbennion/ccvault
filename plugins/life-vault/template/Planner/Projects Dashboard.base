@@ -1,0 +1,63 @@
+filters:
+  and:
+    - type == "project"
+    - file.inFolder("Projects")
+properties:
+  status:
+    displayName: Status
+  health:
+    displayName: Health
+  domain:
+    displayName: Domain
+  surface:
+    displayName: Surface
+  deadline:
+    displayName: Deadline
+views:
+  - type: table
+    name: Active
+    filters:
+      and:
+        - status == "active"
+    groupBy:
+      property: domain
+      direction: ASC
+    order:
+      - file.name
+      - health
+      - surface
+      - deadline
+    sort:
+      - property: health
+        direction: ASC
+  - type: table
+    name: On Hold
+    filters:
+      and:
+        - status == "on_hold"
+    order:
+      - file.name
+      - domain
+      - hold_reason
+      - hold_date
+  - type: table
+    name: Closed
+    filters:
+      or:
+        - status == "complete"
+        - status == "cancelled"
+    order:
+      - file.name
+      - domain
+      - status
+  - type: table
+    name: All Projects
+    order:
+      - file.name
+      - domain
+      - status
+      - health
+      - surface
+    sort:
+      - property: status
+        direction: ASC

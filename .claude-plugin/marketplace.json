@@ -1,0 +1,14 @@
+{
+  "name": "rick-plugins",
+  "description": "Rick's Claude Code plugins",
+  "owner": {
+    "name": "Rick Bennion"
+  },
+  "plugins": [
+    {
+      "name": "life-vault",
+      "source": "./plugins/life-vault",
+      "description": "Run your personal and work life from an Obsidian vault that keeps learning about you."
+    }
+  ]
+}
